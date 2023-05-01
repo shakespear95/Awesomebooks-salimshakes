@@ -3,10 +3,10 @@ import { ordinalSuffix } from './utils.js';
 class Store {
   static getBooks() {
     let books;
-    if (localStorage.getItem("books") === null) {
+    if (localStorage.getItem('books') === null) {
       books = [];
     } else {
-      books = JSON.parse(localStorage.getItem("books"));
+      books = JSON.parse(localStorage.getItem('books'));
     }
     return books;
   }
@@ -14,7 +14,7 @@ class Store {
   static addBook(book) {
     const books = Store.getBooks();
     books.push(book);
-    localStorage.setItem("books", JSON.stringify(books));
+    localStorage.setItem('books', JSON.stringify(books));
   }
 
   static removeBook(id, date) {
@@ -24,7 +24,7 @@ class Store {
         books.splice(index, 1);
       }
     });
-    localStorage.setItem("books", JSON.stringify(books));
+    localStorage.setItem('books', JSON.stringify(books));
   }
 
   static generateId() {
@@ -41,4 +41,4 @@ class Store {
   }
 }
 
-export { Store };
+export default Store;

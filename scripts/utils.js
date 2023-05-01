@@ -1,16 +1,18 @@
-import { DateTime } from "/node_modules/luxon/src/luxon.js";
+// eslint-disable-next-line import/no-absolute-path, import/no-unresolved
+import { DateTime } from '/node_modules/luxon/src/luxon.js';
+
 export const formatDate = (dateString) => {
   const date = DateTime.fromISO(dateString);
-  return date.toFormat("LLLL d, yyyy");
+  return date.toFormat('LLLL d, yyyy');
 };
 
 export const formatTime = (dateString) => {
   const date = DateTime.fromISO(dateString);
-  return date.toFormat("h:mm:ss a");
+  return date.toFormat('h:mm:ss a');
 };
 
 export const refreshTime = () => {
-  const timeDisplay = document.getElementById("time");
+  const timeDisplay = document.getElementById('time');
   const date = DateTime.now();
   const formattedDate = formatDate(date.toISO());
   const formattedTime = formatTime(date.toISO());
@@ -18,24 +20,25 @@ export const refreshTime = () => {
 };
 
 export const showSection = (sectionToShow) => {
-  const sections = document.querySelectorAll("section");
+  const sections = document.querySelectorAll('section');
   sections.forEach((section) => {
     if (section.classList.contains(sectionToShow)) {
-      section.style.display = "block";
+      section.style.display = 'block';
     } else {
-      section.style.display = "none";
+      section.style.display = 'none';
     }
   });
 };
 
 export const ordinalSuffix = (day) => {
   if (day % 10 === 1 && day !== 11) {
-    return day + "st";
-  } else if (day % 10 === 2 && day !== 12) {
-    return day + "nd";
-  } else if (day % 10 === 3 && day !== 13) {
-    return day + "rd";
-  } else {
-    return day + "th";
+    return `${day}st`;
   }
+  if (day % 10 === 2 && day !== 12) {
+    return `${day}nd`;
+  }
+  if (day % 10 === 3 && day !== 13) {
+    return `${day}rd`;
+  }
+  return `${day}th`;
 };
