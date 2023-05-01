@@ -1,8 +1,8 @@
 
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Awesome-books project 
-> This is the website for my Microverse Portfolio Project
+# Awesome-books project
+> This is the website for my Microverse Awesome Books Project
 
 ## Built With
 
