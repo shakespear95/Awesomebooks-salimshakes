@@ -1,5 +1,4 @@
-import { DateTime } from "luxon";
-import { ordinalSuffix } from "./utils.js";
+import { ordinalSuffix } from './utils.js';
 
 class Store {
   static getBooks() {
@@ -29,18 +28,17 @@ class Store {
   }
 
   static generateId() {
-    const date = DateTime.local();
-    const year = date.year;
-    const month = date.month;
-    const day = date.day;
-    const hours = date.hour;
-    const minutes = date.minute;
-    const seconds = date.second;
-    const milliseconds = date.millisecond;
+    const date = new Date();
+    const year = date.getFullYear();
+    const month = date.getMonth() + 1;
+    const day = date.getDate();
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
+    const seconds = date.getSeconds();
+    const milliseconds = date.getMilliseconds();
     const ordinalDay = ordinalSuffix(day);
     return `${year}${month}${ordinalDay}${hours}${minutes}${seconds}${milliseconds}`;
   }
 }
 
 export { Store };
-

@@ -95,21 +95,21 @@ h1, h2 {
 
 #book-form {
     text-align: center;
-    width: 100%;
+    width: 74%;
+    margin: auto;
 }
 
 #book-name ,
 #book-author{
-    width: 73%;
+    width: 97%;
 }
 
 .add {
-    align-items: end;
+    display: block;
+    margin-left: 92%;
+    box-shadow: 6px 5px 5px 3px black;
 }
 
-.list{
-
-}
 
 .line {
     width: 30%;
@@ -171,7 +171,20 @@ h1, h2 {
     margin-bottom: 0.5rem;
   }
 
+  .con-info {
+    margin-left: 20%;
+  }
+
 footer {
     border: solid ;
-    margin-top: 6em;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background-color: #f2f2f2;
+    display: flex;
+    padding: 02px 20px;
+    width: 96%;
+    margin: auto;
 }

@@ -1,6 +1,6 @@
 import { Store } from './store.js';
 
-export class UI {
+class UI {
   constructor(container) {
     this.container = container;
   }
@@ -18,7 +18,7 @@ export class UI {
     this.container.appendChild(bookInfo);
   }
 
-  removeBook = (element) => {
+  removeBook(element) {
     element.remove();
     Store.removeBook(
       element.querySelector(".remove").dataset.id,
@@ -42,3 +42,5 @@ export class UI {
     }, 3000);
   }
 }
+
+export { UI };
