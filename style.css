@@ -15,6 +15,15 @@ nav {
 .logo > p {
     margin-left: 10%;
 }
+.timer {
+    display: flex;
+    justify-content: end;
+  }
+  
+  #time {
+    text-align: left;
+  }
+
 
 .left-nav{
     display: flex;

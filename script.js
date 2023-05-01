@@ -7,35 +7,24 @@ class Book {
   }
 }
 
-'use strict';
+import { DateTime } from "luxon";
 
 function refreshTime() {
   const timeDisplay = document.getElementById("time");
-  const currentDate = new Date();
-  const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-  const month = monthNames[currentDate.getMonth()];
-  const day = currentDate.getDate();
-  const year = currentDate.getFullYear();
+  const currentDate = DateTime.local();
 
-  const hours = currentDate.getHours();
-  const minutes = currentDate.getMinutes().toString().padStart(2, '0');
-  const seconds = currentDate.getSeconds().toString().padStart(2, '0');
-  const amPm = hours >= 12 ? 'pm' : 'am';
+  const formattedDate = currentDate.toLocaleString({
+    month: "long",
+    day: "ordinal",
+    year: "numeric"
+  });
 
-  const ordinalSuffix = (day) => {
-    if (day % 10 === 1 && day !== 11) {
-      return day + "st";
-    } else if (day % 10 === 2 && day !== 12) {
-      return day + "nd";
-    } else if (day % 10 === 3 && day !== 13) {
-      return day + "rd";
-    } else {
-      return day + "th";
-    }
-  };
-
-  const formattedDate = `${month} ${ordinalSuffix(day)}, ${year}`;
-  const formattedTime = `${((hours + 11) % 12) + 1}:${minutes}:${seconds} ${amPm}`;
+  const formattedTime = currentDate.toLocaleString({
+    hour: "numeric",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: true
+  });
 
   timeDisplay.textContent = `${formattedDate}, ${formattedTime}`;
 }
