@@ -1,0 +1,185 @@
+* {
+  font-family: 'Comfortaa', sans-serif;
+  font-size: large;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  border: solid black;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.logo > p {
+  margin-left: 10%;
+}
+
+.timer {
+  display: flex;
+  justify-content: end;
+}
+
+#time {
+  text-align: left;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.left-nav {
+  display: flex;
+  align-items: center;
+}
+
+.left-nav a {
+  margin-left: 1rem;
+}
+
+/* Add hover effect for the nav elements */
+a:hover {
+  color: rgb(153, 14, 84);
+}
+
+.container {
+  border: 1px solid black;
+}
+
+h1,
+h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: xxx-large;
+}
+
+.book {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid gray;
+}
+
+.book-details {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.book-title {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.book-info {
+  display: flex;
+  justify-content: space-between;
+  height: 2em;
+  padding-top: 1%;
+}
+
+.book-author {
+  font-style: italic;
+  color: gray;
+  margin-bottom: 5px;
+}
+
+#book-form {
+  text-align: center;
+  width: 74%;
+  margin: auto;
+}
+
+#book-name,
+#book-author {
+  width: 97%;
+}
+
+.add {
+  display: block;
+  margin-left: 92%;
+  box-shadow: 6px 5px 5px 3px black;
+}
+
+.line {
+  width: 30%;
+  border-top: 4px solid black;
+  margin-top: 50px;
+}
+
+.remove {
+  padding: 5px 10px;
+  border: none;
+  box-shadow: 6px 5px 5px 3px black;
+  cursor: pointer;
+}
+
+.book-info:nth-child(odd) {
+  background-color: lightgray;
+}
+
+.textpart {
+  margin-left: 1%;
+}
+
+.buttonpart {
+  margin-right: 1%;
+}
+
+.book:last-child {
+  margin-bottom: 0;
+}
+
+.book button.remove {
+  margin-left: auto;
+}
+
+.form {
+  margin-bottom: 2em;
+}
+
+.contact-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Style the unordered list */
+.contact-me ul {
+  list-style-position: inside;
+  padding-left: 0;
+  text-align: left;
+}
+
+/* Style the list items */
+.contact-me li {
+  margin-bottom: 0.5rem;
+}
+
+.con-info {
+  margin-left: 20%;
+}
+
+footer {
+  border: solid;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background-color: #f2f2f2;
+  display: flex;
+  padding: 02px 20px;
+  width: 96%;
+  margin: auto;
+}
